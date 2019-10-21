@@ -1,0 +1,3 @@
+[submodule "pulseview"]
+	path = pulseview
+	url = https://github.com/sigrokproject/pulseview.git
