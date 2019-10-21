@@ -31,7 +31,9 @@ pkg_check_modules(LIBSIGROKCXX REQUIRED libsigrokcxx)
 pkg_check_modules(LIBSIGROK_DECODE REQUIRED libsigrokdecode)
 
 FILE(GLOB SRC_LIST src/*.cpp
-                   src/*.h)
+                   src/*.h
+                   src/detail/*.cpp
+                   src/detail/*.h)
 
 FILE(GLOB PULSEVIEW pulseview/pv/*.cpp
                 pulseview/pv/*.hpp
