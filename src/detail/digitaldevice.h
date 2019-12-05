@@ -15,15 +15,6 @@ public:
                       const std::shared_ptr<sigrok::InputFormat> &format,
                       const std::map<std::string, Glib::VariantBase> &options,
                       short *buffer, uint32_t size);
-        ~DigitalDevice();
-
-        // Copy
-        DigitalDevice(const DigitalDevice &other);
-        DigitalDevice &operator=(const DigitalDevice &other);
-
-        // Move
-        DigitalDevice(DigitalDevice &&other);
-        DigitalDevice &operator=(DigitalDevice &&other);
 
 public:
 	std::string full_name() const override;
@@ -45,6 +36,7 @@ private:
         uint32_t m_size;
 
         std::shared_ptr<sigrok::Input> m_input;
+        bool m_device_open;
 };
 
 

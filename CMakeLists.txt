@@ -42,7 +42,7 @@ FILE(GLOB PULSEVIEW pulseview/pv/*.cpp
                 pulseview/pv/*/*/*.cpp
                 pulseview/pv/*/*/*.hpp)
 
-FILE(GLOB UI_FILES ui/*.ui) # TODO: add pulseview UI files here
+FILE(GLOB UI_FILES ui/*.ui)
 qt5_wrap_ui(PROJECT_UI ${UI_FILES})
 
 add_definitions(-DQT_NO_KEYWORDS)
@@ -116,7 +116,7 @@ target_link_libraries(${PROJECT_NAME}
                 ${Qt5Svg_LIBRARIES}
                 ${Qt5Xml_LIBRARIES}
                 ${PYTHON_LIBRARIES}
-                ${LIBSIGROK_LIBRARIES}
+				${LIBSIGROK_LIBRARIES}
                 ${LIBSIGROKCXX_LIBRARIES}
                 ${LIBSIGROK_DECODE_LIBRARIES}
                 ${GLIBMM_LIBRARIES}
@@ -133,3 +133,4 @@ if (NOT WIN32)
 		message(FATAL_ERROR "pthread libraries not found!")
 	endif()
 endif()
+
